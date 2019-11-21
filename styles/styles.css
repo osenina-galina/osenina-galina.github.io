@@ -919,6 +919,7 @@ textarea{
       padding: 175px 50px 100px 115px;
       background: #fff;
       z-index: 1000;
+      overflow: auto;
    }
 
    .header-menu-open .header__menu--mob{
