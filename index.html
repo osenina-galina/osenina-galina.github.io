@@ -11,16 +11,51 @@
     <link rel="stylesheet" href="styles/pagination.css">
     <link rel="stylesheet" href="styles/dropdown.css">
     <script src="js/pagination.js"></script>
+    <script src="js/menu.js"></script>
     <title></title>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" class="header__link">
-                <img class="header__logo" src="images/rr-logo.svg" alt="" title="">
+        <div class="container container-header">
+            <a href="/" class="header__logo">
+                <img class="header__logo-img" src="images/rr-logo.svg" alt="" title="">
             </a>
+            <div class="header__menu">
+                <div class="header__menu--mob"></div>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Open position </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__button">
+                    Send CV
+                </a>
+                <nav class="header__nav--mob">
+                    <ul class="nav-mob">
+                        <li class="nav-mob__item">
+                            <a href="#" class="nav-mob__link">Services</a>
+                        </li>
+                        <li class="nav-mob__item">
+                            <a href="#" class="nav-mob__link">Company</a>
+                        </li>
+                        <li class="nav-mob__item">
+                            <a href="#" class="nav-mob__link">Events</a>
+                        </li>
+                        <li class="nav-mob__item">
+                            <a href="#" class="nav-mob__link">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <!--<img class="" src="images/icons/menu.svg" alt="">-->
     </header>
     <div class="intro">
         <img class="intro__img intro__img--desc" src="images/intro.jpg" alt="">
@@ -28,7 +63,7 @@
     </div>
     <div class="menu-stripe">
         <div class="container">
-            <div class="menu clearfix">
+            <div class="menu">
                 <div class="menu__item menu__dropdown menu__dropdown--project">
                     <span class="menu__dropdown-heading">Choose project</span>
                     <div class="dropdown">
@@ -74,11 +109,11 @@
                 <div class="menu__item menu__dropdown menu__dropdown--qualification">
                     <span class="menu__dropdown-heading">Your qualification</span>
                 </div>
-                <div class="menu__item menu__vacancies">
-                    Vacancies <span class="menu__value">5</span>
-                </div>
                 <div class="menu__item menu__location">
                     Location <span class="menu__value">Kyiv, Boston, Remote</span>
+                </div>
+                <div class="menu__item menu__vacancies">
+                    Vacancies <span class="menu__value">5</span>
                 </div>
             </div>
         </div>
@@ -332,15 +367,15 @@
                 <div class="form__columns">
                     <div class="form__group">
                         <label class="form__label form__label--required" for="first_name">First Name</label>
-                        <input class="form__input" type="text" id="first_name" name="first_name" placeholder="Enter your first name">
+                        <input class="form__input" type="text" id="first_name" name="first_name" placeholder="Enter your first name" >
                     </div>
                     <div class="form__group">
                         <label class="form__label form__label--required" for="first_name">Email</label>
-                        <input class="form__input" type="email" id="email" name="email" placeholder="Enter your email">
+                        <input class="form__input" type="email" id="email" name="email" placeholder="Enter your email" >
                     </div>
                     <div class="form__group">
                         <label class="form__label form__label--required" for="phone">Phone</label>
-                        <input class="form__input" type="tel" id="phone" name="phone" placeholder="Enter your phone">
+                        <input class="form__input" type="tel" id="phone" name="phone" placeholder="Enter your phone" >
                     </div>
                     <div class="form__group">
                         <label class="form__label" for="linkedin">LinkedIn Profile</label>
@@ -353,7 +388,7 @@
                 </div>
                 <label class="form__label form__label--required">Add resume or CV</label>
                 <div class="form__group form__group-cv form__group--full form__group--dashed">
-                    <input type="file" id="cv" name="cv" placeholder="Attach your CV">
+                    <input type="file" id="cv" name="cv" placeholder="Attach your CV" >
                     <label for="cv" class="form__label-cv">
                         <span class="placeholder">Attach your CV</span>
                     </label>
@@ -462,6 +497,7 @@
             </div>
         </div>
     </footer>
+    <div class="overlay"></div>
 </body>
 </html>
 
