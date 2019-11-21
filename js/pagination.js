@@ -86,14 +86,14 @@ var Pagination = function(dItem, iCount, dContainer){
         var _last = document.querySelectorAll('.pagination__item').length - 2;
 
         if (el.getAttribute('data-page') == 1){
-            document.getElementsByClassName('pagination__item--prev')[0].classList += ' pagination__item--hidden';
-            document.getElementsByClassName('pagination__item--next')[0].classList.remove('pagination__item--hidden');
+            document.getElementsByClassName('pagination__item--prev')[0].classList += ' pagination__item--disabled';
+            document.getElementsByClassName('pagination__item--next')[0].classList.remove('pagination__item--disabled');
         } else if (el.getAttribute('data-page') == _last){
-            document.getElementsByClassName('pagination__item--prev')[0].classList.remove('pagination__item--hidden');
-            document.getElementsByClassName('pagination__item--next')[0].classList += ' pagination__item--hidden';
+            document.getElementsByClassName('pagination__item--prev')[0].classList.remove('pagination__item--disabled');
+            document.getElementsByClassName('pagination__item--next')[0].classList += ' pagination__item--disabled';
         } else {
-            document.getElementsByClassName('pagination__item--next')[0].classList.remove('pagination__item--hidden');
-            document.getElementsByClassName('pagination__item--prev')[0].classList.remove('pagination__item--hidden');
+            document.getElementsByClassName('pagination__item--next')[0].classList.remove('pagination__item--disabled');
+            document.getElementsByClassName('pagination__item--prev')[0].classList.remove('pagination__item--disabled');
         }
 
         _current[0].className = _current[0].className.replace(' pagination__item--active', '');
@@ -103,7 +103,7 @@ var Pagination = function(dItem, iCount, dContainer){
     this.init = function(){
         _data = pagination(dItem, 1, iCount);
         createButtons(_data.pages, dContainer);
-        document.getElementsByClassName('pagination__item--prev')[0].classList += ' pagination__item--hidden';
+        document.getElementsByClassName('pagination__item--prev')[0].classList += ' pagination__item--disabled';
         handleItems(_data.start, _data.end, dItem);
     }
 };
