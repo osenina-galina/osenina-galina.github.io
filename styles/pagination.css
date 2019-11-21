@@ -34,8 +34,8 @@
     color: #fff;
 }
 
-.pagination__item--hidden{
-    visibility: hidden;
+.pagination__item--disabled{
+    pointer-events: none;
 }
 
 .pagination__item.pagination__item--next {
