@@ -956,6 +956,7 @@ textarea{
 
    .header-menu-open{
       overflow: hidden;
+      position: fixed;
    }
 
    .header-menu-open .overlay{
